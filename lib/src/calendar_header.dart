@@ -3,19 +3,22 @@ import 'default_styles.dart' show defaultHeaderTextStyle;
 
 class CalendarHeader extends StatelessWidget {
   /// Passing in values for [leftButtonIcon] or [rightButtonIcon] will override [headerIconColor]
-  CalendarHeader(
-      {@required this.headerTitle,
-      this.headerMargin,
-      this.showHeader,
-      this.headerTextStyle,
-      this.showHeaderButtons,
-      this.headerIconColor,
-      this.leftButtonIcon,
-      this.rightButtonIcon,
-      @required this.onLeftButtonPressed,
-      @required this.onRightButtonPressed,
-      this.isTitleTouchable,
-      @required this.onHeaderTitlePressed});
+  CalendarHeader({
+    @required this.headerTitle,
+    this.headerMargin,
+    this.showHeader,
+    this.headerTextStyle,
+    this.showHeaderButtons,
+    this.headerIconColor,
+    this.leftButtonIcon,
+    this.rightButtonIcon,
+    @required this.onLeftButtonPressed,
+    @required this.onRightButtonPressed,
+    this.isTitleTouchable,
+    @required this.onHeaderTitlePressed,
+    this.headerDecoration,
+    this.headerHeight,
+  });
 
   final String headerTitle;
   final EdgeInsetsGeometry headerMargin;
@@ -29,6 +32,8 @@ class CalendarHeader extends StatelessWidget {
   final VoidCallback onRightButtonPressed;
   final bool isTitleTouchable;
   final VoidCallback onHeaderTitlePressed;
+  final Decoration headerDecoration;
+  final double headerHeight;
 
   TextStyle get getTextStyle =>
       headerTextStyle != null ? headerTextStyle : defaultHeaderTextStyle;
@@ -55,6 +60,8 @@ class CalendarHeader extends StatelessWidget {
   Widget build(BuildContext context) => showHeader
       ? Container(
           margin: headerMargin,
+          decoration: headerDecoration,
+          height: headerHeight,
           child: DefaultTextStyle(
               style: getTextStyle,
               child: Row(

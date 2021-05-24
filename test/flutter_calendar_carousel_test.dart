@@ -22,7 +22,7 @@ void main() {
               color: Colors.red,
             ),
             thisMonthDayBorderColor: Colors.grey,
-            headerText: 'Custom Header',
+            headerText: (_) => 'Custom Header',
             weekFormat: true,
             height: 200.0,
             showIconBehindDayText: true,

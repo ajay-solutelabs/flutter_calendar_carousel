@@ -147,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       thisMonthDayBorderColor: Colors.grey,
 //          weekDays: null, /// for pass null when you do not want to render weekDays
-      headerText: 'Custom Header',
+      headerText: (_) => 'Custom Header',
       weekFormat: true,
       markedDatesMap: _markedDateMap,
       height: 200.0,

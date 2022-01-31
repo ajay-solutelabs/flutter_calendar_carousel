@@ -35,7 +35,7 @@ void main() {
             todayTextStyle: TextStyle(
               color: Colors.blue,
             ),
-            markedDateIconBuilder: (event) {
+            markedDateIconBuilder: (dynamic event) {
               return event.icon;
             },
             todayButtonColor: Colors.transparent,
@@ -56,7 +56,7 @@ void main() {
   testWidgets(
     'make sure onDayPressed is called when the user tap',
     (WidgetTester tester) async {
-      DateTime pressedDay;
+      DateTime? pressedDay;
 
       await tester.pumpWidget(
         MaterialApp(
@@ -112,7 +112,7 @@ void main() {
   testWidgets(
     'make sure onDayLongPressed is called when the user press and hold',
     (WidgetTester tester) async {
-      DateTime longPressedDay;
+      DateTime? longPressedDay;
 
       await tester.pumpWidget(
         MaterialApp(

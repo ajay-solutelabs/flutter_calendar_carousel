@@ -1179,17 +1179,6 @@ class _CalendarState<T extends EventInterface>
               styleForBuilder,
               isNextMonthDay,
               isThisMonthDay,
-              now) ??
-          getDefaultDayContainer(
-              isSelectable,
-              index,
-              isSelectedDay,
-              isToday,
-              isPrevMonthDay,
-              textStyle,
-              defaultTextStyle,
-              isNextMonthDay,
-              isThisMonthDay,
               now);
     } else {
       return getDefaultDayContainer(

@@ -965,7 +965,7 @@ class _CalendarState<T extends EventInterface>
 
       //call callback
       if (widget.onCalendarChanged != null) {
-        WidgetsBinding.instance!.addPostFrameCallback((_) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
           widget.onCalendarChanged!(!widget.weekFormat
               ? this._dates[page]
               : this._weeks[page][firstDayOfWeek!]);
